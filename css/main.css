@@ -1,0 +1,194 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+* { box-sizing: border-box; }
+
+body {
+  background: #99C1CB;
+  max-width: 600px;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  min-width: 385px;
+}
+
+h2 { margin-bottom: 5px; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #99C1CB;
+  margin: 30px 0;
+  padding: 0;
+}
+
+.fullwidth-input { width: 100%; }
+
+.relative-el { position: relative; }
+
+h1 { margin: 0; }
+
+#main-header p {
+  margin: 5px 0;
+  color: #848A8F;
+  font-weight: 300;
+}
+
+#main {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto 20px auto;
+}
+
+/*
+  FORM STYLES
+*/
+
+form ol { padding-left: 0; }
+
+form ol li {
+  background: #fff;
+  list-style: none;
+}
+
+form ol li > div {
+  background: #EFF0F1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+input {
+  display: inline-block;
+  font-size: 1em;
+  padding: 5px;
+  color: #848A8F;
+  height: 35px;
+  font-weight: 300;
+  margin: 5px 0 15px 0;
+  border: 1px solid #6692C4;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.inline-error-mark {
+  display: inline-block;
+  width: 20px;
+  padding: 2px;
+  background-image: url(../img/form/error-mark.png);
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+}
+
+.error-msg {
+  margin: 0;
+  color: #C30016;
+}
+
+.security-code-holder {
+  display: inline-block;
+  width: 31%;
+}
+
+.expiration-date-holder {
+  display: inline-block;
+  width: 68%;
+  vertical-align: top;
+}
+
+#website { padding-right: 40%; }
+
+.input-label::after { content: ':' }
+
+.input-label {
+  display: block;
+  color: #848A8F;
+}
+
+#showpassword-label input[type=checkbox] {
+  margin: 0;
+  height: auto;
+  width: auto;
+}
+
+#showpassword-label span {
+  font-size: 0.8em;
+  color: #848A8F;
+  vertical-align: top;
+}
+
+#website-input-suffix {
+  background: #E2E5E6;
+  border: 1px solid #6692C4;
+  border-left: 0;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  display: inline-block;
+  color: #848A8F;
+  text-align: center;
+  height: 35px;
+  position: absolute;
+  padding-top: 7px;
+  margin-top: 5px;
+  right: 0;
+  top: 0;
+  width: 40%;
+}
+
+.expiration-date-holder select {
+  height: 35px;
+  width: 49%;
+  margin-top: 5px;
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  color: #848A8F;
+  vertical-align: top;
+  border: 1px solid #6692C4;
+}
+
+li, h1 { color: #4079C3; }
+
+#creditcardnumber { width: 57%; }
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background: #4079C3;
+  border: 0;
+  color: #fff;
+  font-size: 1.2em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.submit-button:hover { cursor: pointer; }
+.submit-button[disabled=disabled] { opacity: 0.6; }
+
+#creditcard-image-holder {
+  display: inline-block;
+  padding-right: 5px;
+  vertical-align: middle;
+  text-align: right;
+  width: 43%;
+}
+
+.credit-card-image {
+  height: 25px;
+  opacity: 0.5;
+}
+
+
+@media screen and (max-width: 500px) {
+  #creditcard-image-holder { width: 49%; }
+  #creditcard-image-holder img { height: 20px; }
+  #creditcardnumber { width: 51%; }
+
+  #website-holder span { font-size: 0.8em; }
+
+  .expiration-date-holder { width: 66%; }
+  .expiration-date-holder select { width: 46%; }
+}

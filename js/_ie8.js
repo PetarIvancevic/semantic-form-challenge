@@ -1,0 +1,19 @@
+'use strict';
+
+var creditCardImgHolder = $('#creditcard-image-holder img');
+
+creditCardImgHolder.addClass('fadedImage');
+
+$('#creditcardnumber').validateCreditCard(function(result) {
+  if (result.card_type && result.length_valid && result.valid) {
+    validCreditCard = true;
+    submitButton.removeAttr('disabled');
+    $('#' + result.card_type.name + 'img').removeClass('fadedImage');
+  }
+
+  if (!result.length_valid && validCreditCard) {
+    validCreditCard = false;
+    submitButton.attr('disabled', true);
+    creditCardImgHolder.addClass('fadedImage');
+  }
+}, ['visa', 'discover', 'amex', 'maestro']);

@@ -108,6 +108,3 @@ function addListeners() {
 }
 
 addListeners();
-
-// IE HAS ITS OWN REVEAL PASSWORD
-$('#showpassword-label').css('display', 'none');

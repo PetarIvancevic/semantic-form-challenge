@@ -17,3 +17,6 @@ $('#creditcardnumber').validateCreditCard(function(result) {
     creditCardImgHolder.addClass('fadedImage');
   }
 }, ['visa', 'discover', 'amex', 'maestro']);
+
+// IE HAS ITS OWN REVEAL PASSWORD
+$('#showpassword-label').css('display', 'none');

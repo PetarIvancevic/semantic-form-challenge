@@ -109,6 +109,14 @@ input {
   color: #848A8F;
 }
 
+#showpassword-label {
+  display: inline-block;
+}
+
+#showpassword-label img {
+  pointer-events: none;
+}
+
 #showpassword-label input[type=checkbox] {
   margin: 0;
   height: auto;

@@ -42,11 +42,13 @@
               <label class="input-label" for="website">Website address</label>
               <div class="relative-el">
                 <input type="text" class="fullwidth-input" name="website"
-                  id="website" placeholder="mynewsite"
+                  id="website" placeholder="Website url"
                   aria-labelledby="website" aria-required="true"
                   tabindex="0"
                   required="required" />
-                <span id="website-input-suffix">.free-websites.com</span>
+                <label for="website">
+                  <span id="website-input-suffix">.free-websites.com</span>
+                </label>
               </div>
               <!-- error handling -->
             </div>
@@ -58,7 +60,7 @@
               <div id="fullname-holder">
                 <label class="input-label" for="fullname">Full name</label>
                 <input type="text" class="fullwidth-input" name="fullname"
-                  id="fullname" placeholder="Your full name..."
+                  id="fullname" placeholder="Full name"
                   tabindex="0" required="required"
                   aria-labelledby="fullname" aria-required="true" />
                 <!-- error handling -->
@@ -67,7 +69,7 @@
                 <label class="input-label" for="emailaddress">
                   Email address</label>
                 <input type="email" id="emailaddress" class="fullwidth-input"
-                  name="email" placeholder="Your email..."
+                  name="email" placeholder="Email"
                   aria-labelledby="emailaddress" aria-required="true"
                   required="required" tabindex="0" />
                 <!-- error handling -->
@@ -75,13 +77,14 @@
               <div id="password-holder">
                 <label class="input-label" for="password">Password</label>
                 <input type="password" id="password" class="fullwidth-input"
-                  name="password" placeholder="Your password..."
+                  name="password" placeholder="Password"
                   aria-labelledby="password" aria-required="true"
                   required="required" tabindex="0" />
                 <label id="showpassword-label">
                   <input type="checkbox" id="showpassword" aria-checked="false"
-                    name="showpassword" aria-hidden="true" />
-                  <span>Reveal password</span>
+                    name="showpassword" aria-hidden="true"
+                    aria-labelledby="reveal-description" />
+                  <span id="reveal-description">Reveal password</span>
                 </label>
                 <!-- error handling -->
               </div>
@@ -126,7 +129,7 @@
                 <label class="input-label" for="securitycode">
                   Security code</label>
                 <input type="number" name="securitycode"
-                  placeholder="123" id="securitycode"
+                  placeholder="Security code" id="securitycode"
                   aria-labelledby="securitycode"
                   aria-required="true" required="required" tabindex="0" />
               </div>

@@ -7,7 +7,7 @@ var checkboxImg;
 var showPassword = $('#showpassword');
 var validCreditCard = false;
 
-if (!$('#creditcardnumber').val()) {
+if (!document.getElementById('creditcardnumber').value) {
   $('#creditcardform .submit-button')
     .attr('disabled', true)
     .attr('aria-disabled', true);
@@ -47,7 +47,8 @@ $('#showpassword').change(function(val) {
 });
 
 $('#showpassword-label').prepend(
-  '<span id="ie-helper" for="showpassword" tabindex="0" role="button">' +
+  '<span id="ie-helper" for="showpassword" tabindex="0" role="button" ' +
+    'aria-labelledby="reveal-description">' +
     '<img id="checkbox-img" src="img/form/checkbox_unchecked.png" ' +
       'alt="checkbox img" />' +
   '</span>'

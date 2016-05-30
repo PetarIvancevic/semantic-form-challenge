@@ -11,7 +11,7 @@ function displayErrorMessages(errors) {
     if (errorHolder.length) {
       errorHolder.html(
         '<p class="error-msg" id="' + error.holder + '-message">'
-          + '<span class="inline-error-mark">!</span>' + error.message + '</p>'
+          + '<span class="inline-error-mark">!</span> ' + error.message + '</p>'
       );
     } else {
       holder.append(

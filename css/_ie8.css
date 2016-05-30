@@ -2,3 +2,5 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
 }
+
+.input-label:after { content: ':' }

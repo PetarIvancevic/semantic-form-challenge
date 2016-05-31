@@ -1,6 +1,7 @@
 'use strict';
 
 var creditCardImgHolder = $('#creditcard-image-holder img');
+var creditCardHolder = $('#creditcardnumber-holder');
 
 creditCardImgHolder.addClass('fadedImage');
 

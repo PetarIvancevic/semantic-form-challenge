@@ -3,9 +3,10 @@
 var passwordInput = $('#password');
 var creditCardImgHolder = $('#creditcard-image-holder img');
 var submitButton = $('#creditcardform .submit-button');
+var creditCardHolder = $('#creditcardnumber-holder');
 var checkboxImg;
 var showPassword = $('#showpassword');
-var validCreditCard = false;
+var validCreditCard = false, editedCreditCardNumber = false;
 
 if (!document.getElementById('creditcardnumber').value) {
   $('#creditcardform .submit-button')
@@ -18,11 +19,17 @@ $('#showpassword').css('display', 'none');
 
 // CREDIT CARD VALIDATION
 $('#creditcardnumber').validateCreditCard(function(result) {
+  var creditCardVal = document.getElementById('creditcardnumber').value;
+  var creditCardError;
+
+  if (!editedCreditCardNumber && creditCardVal) editedCreditCardNumber = true;
+
   if (result.card_type && result.length_valid && result.valid) {
     validCreditCard = true;
     submitButton
       .removeAttr('disabled')
       .removeAttr('aria-disabled');
+    $('#creditcard-error').remove();
     $('#' + result.card_type.name + 'img').css('opacity', 1);
   }
 
@@ -32,6 +39,18 @@ $('#creditcardnumber').validateCreditCard(function(result) {
       .attr('disabled', true)
       .attr('aria-disabled', true);
     creditCardImgHolder.css('opacity', 0.5);
+  }
+
+  if (!validCreditCard && editedCreditCardNumber) {
+    creditCardError = 'Your credit card number is not valid!';
+
+    if (!$('#creditcard-error').length) {
+      creditCardHolder.append(
+        '<p id="creditcard-error" class="error-msg">'
+          + '<span class="inline-error-mark">!</span> ' + creditCardError +
+        '</p>'
+      );
+    }
   }
 }, ['visa', 'discover', 'amex', 'maestro']);
 

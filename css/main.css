@@ -86,6 +86,7 @@ input {
 .error-msg {
   margin: 0;
   color: #C30016;
+  font-size: 16px;
   white-space: nowrap;
 }
 
@@ -188,6 +189,18 @@ li, h1 { color: #4079C3; }
 .credit-card-image {
   height: 25px;
   opacity: 0.5;
+}
+
+#creditcardnumber-holder {
+  font-size: 0;
+}
+
+#creditcardnumber-holder label, #creditcardnumber-holder input {
+  font-size: 16px;
+}
+
+#creditcard-error {
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 500px) {

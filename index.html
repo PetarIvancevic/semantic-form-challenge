@@ -11,18 +11,184 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="css/normalize.min.css">
-
-  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!--[if !IE]>
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/_ie8.css">
+  <![endif]-->
 </head>
 <body>
   <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser.
+        Please <a href="http://browsehappy.com/">upgrade your browser</a>
+        to improve your experience.
+      </p>
   <![endif]-->
+  <div role="main" id="main">
+    <header id="main-header">
+      <h1>Sign Up Now</h1>
+      <p>Pick your new website, free forever.</p>
+      <hr />
+    </header>
+    <section>
+      <form id="creditcardform" action="/" method="post">
+        <ol>
+          <li>
+            <h2>Pick a website address.</h2>
+            <div id="website-holder">
+              <label class="input-label" for="website">Website address</label>
+              <div class="relative-el">
+                <input type="text" class="fullwidth-input" name="website"
+                  id="website" placeholder="Website url"
+                  aria-labelledby="website" aria-required="true"
+                  tabindex="0"
+                  required="required" />
+                <label for="website">
+                  <span id="website-input-suffix">.free-websites.com</span>
+                </label>
+              </div>
+              <!-- error handling -->
+            </div>
+          </li>
+
+          <li>
+            <h2>Create an account.</h2>
+            <div>
+              <div id="fullname-holder">
+                <label class="input-label" for="fullname">Full name</label>
+                <input type="text" class="fullwidth-input" name="fullname"
+                  id="fullname" placeholder="Full name"
+                  tabindex="0" required="required"
+                  aria-labelledby="fullname" aria-required="true" />
+                <!-- error handling -->
+              </div>
+              <div id="email-holder">
+                <label class="input-label" for="emailaddress">
+                  Email address</label>
+                <input type="email" id="emailaddress" class="fullwidth-input"
+                  name="email" placeholder="Email"
+                  aria-labelledby="emailaddress" aria-required="true"
+                  required="required" tabindex="0" />
+                <!-- error handling -->
+              </div>
+              <div id="password-holder">
+                <label class="input-label" for="password">Password</label>
+                <input type="password" id="password" class="fullwidth-input"
+                  name="password" placeholder="Password"
+                  aria-labelledby="password" aria-required="true"
+                  required="required" tabindex="0" />
+                <label id="showpassword-label">
+                  <input type="checkbox" id="showpassword" aria-checked="false"
+                    name="showpassword" aria-hidden="true"
+                    aria-labelledby="reveal-description" />
+                  <span id="reveal-description">Reveal password</span>
+                </label>
+                <!-- error handling -->
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <h2>Enter your payment info.</h2>
+            <div>
+              <div id="creditcardnumber-holder">
+                <label class="input-label" for="creditcardnumber">
+                  Credit card number</label>
+                <input type="text" name="creditcardnumber"
+                  class="fullwidth-input"
+                  id="creditcardnumber" placeholder="Credit card number"
+                  aria-labelledby="creditcardnumber" aria-required="true"
+                  required="required" tabindex="0" />
+                <div id="creditcard-image-holder">
+                  <img
+                    id="visaimg"
+                    class="credit-card-image"
+                    src="img/form/visa.png"
+                    alt="visa image" />
+                  <img
+                    id="maestroimg"
+                    class="credit-card-image"
+                    src="img/form/maestro.png"
+                    alt="maestro image" />
+                  <img
+                    id="discoverimg"
+                    class="credit-card-image"
+                    src="img/form/discover.png"
+                    alt="discover image" />
+                  <img
+                    id="ameximg"
+                    class="credit-card-image"
+                    src="img/form/amex.png"
+                    alt="american express image" />
+                </div>
+              </div>
+              <div id="securitycode-holder" class="security-code-holder">
+                <label class="input-label" for="securitycode">
+                  Security code</label>
+                <input type="number" name="securitycode"
+                  placeholder="Security code" id="securitycode"
+                  aria-labelledby="securitycode"
+                  aria-required="true" required="required" tabindex="0" />
+              </div>
+              <div class="expiration-date-holder">
+                <label class="input-label">Expiration date</label>
+                <select name="creditcardmonth" tabindex="0">
+                  <option value="1">01-January</option>
+                  <option value="2">02-February</option>
+                  <option value="3">03-March</option>
+                  <option value="4">04-April</option>
+                  <option value="5">05-May</option>
+                  <option value="6">06-June</option>
+                  <option value="7">07-July</option>
+                  <option value="8">08-August</option>
+                  <option value="9">09-September</option>
+                  <option value="10">10-October</option>
+                  <option value="11">11-November</option>
+                  <option value="12">12-December</option>
+                </select>
+                <select name="creditcardyear" tabindex="0">
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                </select>
+              </div>
+            </div>
+          </li>
+        </ol>
+        <button type="submit" class="submit-button" tabindex="0">
+          Create your website
+        </button>
+      </form>
+    </section>
+  </div>
 
 
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
   <script src="js/vendor/jqueryCreditCardValidator.min.js"></script>
+  <script src="js/main.js"></script>
+  <!--[if lt IE 10]>
+    <script src="js/_form_validation.js"></script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <script src="js/_ie8.js"></script>
+  <![endif]-->
 </body>
 </html>

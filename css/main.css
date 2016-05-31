@@ -162,6 +162,10 @@ input {
 
 li, h1 { color: #4079C3; }
 
+#creditcardnumber-holder {
+  font-size: 0;
+}
+
 #creditcardnumber { width: 57%; }
 
 .submit-button {
@@ -180,6 +184,7 @@ li, h1 { color: #4079C3; }
 
 #creditcard-image-holder {
   display: inline-block;
+  font-size: 16px;
   padding-right: 5px;
   vertical-align: middle;
   text-align: right;
@@ -189,10 +194,6 @@ li, h1 { color: #4079C3; }
 .credit-card-image {
   height: 25px;
   opacity: 0.5;
-}
-
-#creditcardnumber-holder {
-  font-size: 0;
 }
 
 #creditcardnumber-holder label, #creditcardnumber-holder input {
